@@ -26,7 +26,7 @@ A Go-based Dockerized service that:
 * Executes scripts on the device and reports output.
 * Fully containerized for cross-platform deployment.
 
-### 2. Esper Dashboard Clone
+### 2. Dashboard Clone
 
 A React TypeScript dashboard that:
 
