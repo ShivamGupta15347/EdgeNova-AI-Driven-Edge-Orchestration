@@ -1,7 +1,3 @@
-Got it! You want a **concise, clean README** that represents your **EdgeNova project**, combining all three components, without overwhelming step-by-step instructions. Here’s a polished version based on your references:
-
----
-
 # EdgeNova: AI-Driven Edge Device Orchestration Platform
 
 **EdgeNova** is an intelligent platform for managing edge devices by modeling their behavior and dynamically executing AI-generated commands. It unifies device orchestration, AI-powered shell execution, and dashboard monitoring in a single AI-driven ecosystem.
