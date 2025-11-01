@@ -30,7 +30,7 @@ A Go-based Dockerized service that:
 
 A React TypeScript dashboard that:
 
-* Replicates the Esper device management UI.
+* Replicates the device management UI.
 * Provides real-time device stats, security overview, and location mapping.
 * Sends MQTT commands to devices via an integrated command prompt.
 * Built with React, TypeScript, Vite, and MQTT.js.
