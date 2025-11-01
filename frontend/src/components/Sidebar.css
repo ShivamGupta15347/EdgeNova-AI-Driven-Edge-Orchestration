@@ -1,0 +1,132 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #3a4a5c;
+  color: white;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #4a5a6c;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cube-icon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateX(-10deg) rotateY(25deg);
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  border: 1px solid #2c5d8f;
+}
+
+.cube-face:nth-child(1) {
+  transform: translateZ(12px);
+}
+
+.cube-face:nth-child(2) {
+  transform: rotateY(90deg) translateZ(12px);
+}
+
+.cube-face:nth-child(3) {
+  transform: rotateX(90deg) translateZ(12px);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #b8c5d1;
+  font-size: 14px;
+}
+
+.nav-item:hover {
+  background-color: #4a5a6c;
+  color: white;
+}
+
+.nav-item.active {
+  background-color: #2c3e50;
+  color: white;
+  border-right: 3px solid #3498db;
+}
+
+.nav-item.command-prompt:hover {
+  background-color: #2ecc71;
+}
+
+.nav-label {
+  flex: 1;
+}
+
+.nav-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-badge.beta {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.nav-badge.new {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #3a4a5c;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #5a6a7c;
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #6a7a8c;
+}
