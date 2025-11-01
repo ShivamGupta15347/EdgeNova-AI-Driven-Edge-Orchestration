@@ -103,12 +103,3 @@ A Go REST API using Ollama (Llama 3.2:1B) that:
 
 ---
 
-## License
-
-This project is for demonstration purposes as part of **Esper Spark 2K25: AI Edition**.
-
----
-
-If you want, I can also create a **shorter “one-screen” version** that’s even more concise for GitHub, keeping it **under ~200 lines** but still clearly shows **all three modules and AI integration**.
-
-Do you want me to do that?
