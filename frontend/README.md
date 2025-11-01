@@ -1,10 +1,10 @@
-# Esper Dashboard Clone
+#  Dashboard Clone
 
-A React TypeScript application that replicates the Esper device management dashboard UI with MQTT command functionality.
+A React TypeScript application that replicates the  device management dashboard UI with MQTT command functionality.
 
 ## Features
 
-- 📊 **Dashboard UI** - Complete replica of the Esper dashboard with charts and statistics
+- 📊 **Dashboard UI** - Complete replica of the  dashboard with charts and statistics
 - 🔒 **Device Security Overview** - Risk indicators and security status
 - 💻 **OS Type Distribution** - Visual breakdown of device operating systems
 - 🗺️ **Device Location Mapping** - Interactive map visualization
@@ -14,7 +14,7 @@ A React TypeScript application that replicates the Esper device management dashb
 ## MQTT Integration
 
 The application includes a command prompt interface that connects to:
-- **MQTT Broker**: `mqtts://queue-dev.esper.cloud:443`
+- **MQTT Broker**: ``
 - **Topic**: `hack-2k25-commands`
 - **Protocol**: MQTT over TLS (mqtts)
 
