@@ -1,0 +1,544 @@
+{
+  "dataset": [
+    {
+      "category": "file_operations",
+      "commands": [
+        {
+          "prompt": "List all files in the current directory",
+          "command": "ls -la",
+          "description": "Shows all files including hidden ones with detailed information"
+        },
+        {
+          "prompt": "Show me what's in this folder",
+          "command": "ls",
+          "description": "Basic directory listing"
+        },
+        {
+          "prompt": "Create a new directory called projects",
+          "command": "mkdir projects",
+          "description": "Creates a new directory"
+        },
+        {
+          "prompt": "Create nested directories for my web project",
+          "command": "mkdir -p web-project/src/components",
+          "description": "Creates parent directories as needed"
+        },
+        {
+          "prompt": "Copy file.txt to backup folder",
+          "command": "cp file.txt backup/",
+          "description": "Copies a file to another location"
+        },
+        {
+          "prompt": "Move document.pdf to the Documents folder",
+          "command": "mv document.pdf ~/Documents/",
+          "description": "Moves a file to another location"
+        },
+        {
+          "prompt": "Show me the current directory path",
+          "command": "pwd",
+          "description": "Prints current working directory"
+        },
+        {
+          "prompt": "Go to my home directory",
+          "command": "cd ~",
+          "description": "Changes to home directory"
+        },
+        {
+          "prompt": "Navigate to the parent directory",
+          "command": "cd ..",
+          "description": "Moves up one directory level"
+        },
+        {
+          "prompt": "Create an empty file called notes.txt",
+          "command": "touch notes.txt",
+          "description": "Creates an empty file or updates timestamp"
+        },
+        {
+          "prompt": "Display the contents of config.txt",
+          "command": "cat config.txt",
+          "description": "Shows file contents"
+        },
+        {
+          "prompt": "Show the first 10 lines of log.txt",
+          "command": "head -n 10 log.txt",
+          "description": "Displays first N lines of a file"
+        },
+        {
+          "prompt": "Show the last 20 lines of error.log",
+          "command": "tail -n 20 error.log",
+          "description": "Displays last N lines of a file"
+        },
+        {
+          "prompt": "Count lines in data.csv",
+          "command": "wc -l data.csv",
+          "description": "Counts number of lines in a file"
+        },
+        {
+          "prompt": "Find all .txt files in current directory",
+          "command": "find . -name '*.txt'",
+          "description": "Searches for files by pattern"
+        },
+        {
+          "prompt": "Search for 'error' in all log files",
+          "command": "grep 'error' *.log",
+          "description": "Searches for text pattern in files"
+        }
+      ]
+    },
+    {
+      "category": "system_information",
+      "commands": [
+        {
+          "prompt": "Show system information",
+          "command": "uname -a",
+          "description": "Displays system information"
+        },
+        {
+          "prompt": "Check available disk space",
+          "command": "df -h",
+          "description": "Shows disk usage in human-readable format"
+        },
+        {
+          "prompt": "Show memory usage",
+          "command": "free -h",
+          "description": "Displays memory usage statistics"
+        },
+        {
+          "prompt": "Display current date and time",
+          "command": "date",
+          "description": "Shows current date and time"
+        },
+        {
+          "prompt": "Show system uptime",
+          "command": "uptime",
+          "description": "Displays how long system has been running"
+        },
+        {
+          "prompt": "List running processes",
+          "command": "ps aux",
+          "description": "Shows all running processes"
+        },
+        {
+          "prompt": "Show real-time process information",
+          "command": "top",
+          "description": "Interactive process viewer"
+        },
+        {
+          "prompt": "Display network interfaces",
+          "command": "ip addr",
+          "description": "Shows network interface information"
+        },
+        {
+          "prompt": "Check current user",
+          "command": "whoami",
+          "description": "Displays current username"
+        },
+        {
+          "prompt": "Show logged in users",
+          "command": "who",
+          "description": "Lists currently logged in users"
+        },
+        {
+          "prompt": "Display environment variables",
+          "command": "env",
+          "description": "Shows all environment variables"
+        },
+        {
+          "prompt": "Show PATH variable",
+          "command": "echo $PATH",
+          "description": "Displays PATH environment variable"
+        }
+      ]
+    },
+    {
+      "category": "text_processing",
+      "commands": [
+        {
+          "prompt": "Sort lines in names.txt alphabetically",
+          "command": "sort names.txt",
+          "description": "Sorts file contents"
+        },
+        {
+          "prompt": "Remove duplicate lines from data.txt",
+          "command": "sort data.txt | uniq",
+          "description": "Removes duplicate consecutive lines"
+        },
+        {
+          "prompt": "Count word frequency in document.txt",
+          "command": "cat document.txt | tr ' ' '\\n' | sort | uniq -c",
+          "description": "Counts word occurrences"
+        },
+        {
+          "prompt": "Extract the second column from data.csv",
+          "command": "cut -d',' -f2 data.csv",
+          "description": "Extracts specific columns from delimited file"
+        },
+        {
+          "prompt": "Replace 'old' with 'new' in file.txt",
+          "command": "sed 's/old/new/g' file.txt",
+          "description": "Stream editor for text substitution"
+        },
+        {
+          "prompt": "Show lines containing 'error' with line numbers",
+          "command": "grep -n 'error' logfile.txt",
+          "description": "Searches with line numbers"
+        },
+        {
+          "prompt": "Convert text to uppercase",
+          "command": "tr '[:lower:]' '[:upper:]' < input.txt",
+          "description": "Translates characters"
+        }
+      ]
+    },
+    {
+      "category": "archive_compression",
+      "commands": [
+        {
+          "prompt": "Create a zip archive of the project folder",
+          "command": "zip -r project.zip project/",
+          "description": "Creates ZIP archive"
+        },
+        {
+          "prompt": "Extract contents of archive.zip",
+          "command": "unzip archive.zip",
+          "description": "Extracts ZIP archive"
+        },
+        {
+          "prompt": "Create a tar archive of documents",
+          "command": "tar -cvf documents.tar documents/",
+          "description": "Creates TAR archive"
+        },
+        {
+          "prompt": "Create compressed tar.gz archive",
+          "command": "tar -czvf backup.tar.gz backup/",
+          "description": "Creates compressed TAR archive"
+        },
+        {
+          "prompt": "Extract tar.gz archive",
+          "command": "tar -xzvf archive.tar.gz",
+          "description": "Extracts compressed TAR archive"
+        },
+        {
+          "prompt": "List contents of zip file without extracting",
+          "command": "unzip -l archive.zip",
+          "description": "Lists ZIP contents"
+        }
+      ]
+    },
+    {
+      "category": "permissions",
+      "commands": [
+        {
+          "prompt": "Make script.sh executable",
+          "command": "chmod +x script.sh",
+          "description": "Adds execute permission"
+        },
+        {
+          "prompt": "Set read-only permission for file.txt",
+          "command": "chmod 444 file.txt",
+          "description": "Sets read-only permissions"
+        },
+        {
+          "prompt": "Give owner full permissions on myfile",
+          "command": "chmod 700 myfile",
+          "description": "Owner read/write/execute only"
+        },
+        {
+          "prompt": "Show file permissions for document.pdf",
+          "command": "ls -l document.pdf",
+          "description": "Displays file permissions"
+        },
+        {
+          "prompt": "Change owner of file to current user",
+          "command": "chown $USER file.txt",
+          "description": "Changes file ownership"
+        }
+      ]
+    },
+    {
+      "category": "network_utilities",
+      "commands": [
+        {
+          "prompt": "Test connection to google.com",
+          "command": "ping -c 4 google.com",
+          "description": "Sends 4 ping packets"
+        },
+        {
+          "prompt": "Download file from URL",
+          "command": "wget https://example.com/file.pdf",
+          "description": "Downloads file from web"
+        },
+        {
+          "prompt": "Show network connections",
+          "command": "netstat -tuln",
+          "description": "Displays network connections"
+        },
+        {
+          "prompt": "Display routing table",
+          "command": "ip route",
+          "description": "Shows routing information"
+        },
+        {
+          "prompt": "Lookup DNS for domain.com",
+          "command": "nslookup domain.com",
+          "description": "DNS lookup utility"
+        },
+        {
+          "prompt": "Trace route to server",
+          "command": "traceroute google.com",
+          "description": "Shows network path to destination"
+        }
+      ]
+    },
+    {
+      "category": "process_management",
+      "commands": [
+        {
+          "prompt": "Find process using port 8080",
+          "command": "lsof -i :8080",
+          "description": "Lists processes using specific port"
+        },
+        {
+          "prompt": "Show process tree",
+          "command": "pstree",
+          "description": "Displays process hierarchy"
+        },
+        {
+          "prompt": "Monitor system resources",
+          "command": "htop",
+          "description": "Interactive process viewer"
+        },
+        {
+          "prompt": "Show processes by CPU usage",
+          "command": "ps aux --sort=-%cpu | head",
+          "description": "Lists top CPU consuming processes"
+        },
+        {
+          "prompt": "Check if apache2 is running",
+          "command": "pgrep apache2",
+          "description": "Searches for process by name"
+        }
+      ]
+    },
+    {
+      "category": "package_management",
+      "commands": [
+        {
+          "prompt": "Update package list (Ubuntu/Debian)",
+          "command": "sudo apt update",
+          "description": "Updates package repository information"
+        },
+        {
+          "prompt": "Search for available packages containing 'python'",
+          "command": "apt search python",
+          "description": "Searches for packages"
+        },
+        {
+          "prompt": "Show installed packages",
+          "command": "dpkg -l",
+          "description": "Lists installed packages"
+        },
+        {
+          "prompt": "Check package information",
+          "command": "apt show package-name",
+          "description": "Shows package details"
+        },
+        {
+          "prompt": "List upgradable packages",
+          "command": "apt list --upgradable",
+          "description": "Shows packages that can be upgraded"
+        }
+      ]
+    },
+    {
+      "category": "user_management",
+      "commands": [
+        {
+          "prompt": "Show current user groups",
+          "command": "groups",
+          "description": "Displays user's groups"
+        },
+        {
+          "prompt": "List all users on system",
+          "command": "cut -d: -f1 /etc/passwd",
+          "description": "Shows all system users"
+        },
+        {
+          "prompt": "Show user information",
+          "command": "id",
+          "description": "Displays user and group IDs"
+        },
+        {
+          "prompt": "Check last login times",
+          "command": "last",
+          "description": "Shows login history"
+        }
+      ]
+    },
+    {
+      "category": "system_monitoring",
+      "commands": [
+        {
+          "prompt": "Show disk usage of current directory",
+          "command": "du -sh *",
+          "description": "Displays disk usage summary"
+        },
+        {
+          "prompt": "Monitor file changes in real-time",
+          "command": "tail -f logfile.log",
+          "description": "Follows file updates"
+        },
+        {
+          "prompt": "Show system load average",
+          "command": "cat /proc/loadavg",
+          "description": "Displays system load"
+        },
+        {
+          "prompt": "Check CPU information",
+          "command": "lscpu",
+          "description": "Shows CPU architecture info"
+        },
+        {
+          "prompt": "Display kernel messages",
+          "command": "dmesg | tail -20",
+          "description": "Shows recent kernel messages"
+        },
+        {
+          "prompt": "Show mounted filesystems",
+          "command": "mount | grep -E '^/dev'",
+          "description": "Lists mounted devices"
+        }
+      ]
+    },
+    {
+      "category": "environment_setup",
+      "commands": [
+        {
+          "prompt": "Add directory to PATH temporarily",
+          "command": "export PATH=$PATH:/new/directory",
+          "description": "Modifies PATH for current session"
+        },
+        {
+          "prompt": "Set environment variable",
+          "command": "export VAR_NAME=\"value\"",
+          "description": "Sets environment variable"
+        },
+        {
+          "prompt": "Show command history",
+          "command": "history",
+          "description": "Displays command history"
+        },
+        {
+          "prompt": "Clear terminal screen",
+          "command": "clear",
+          "description": "Clears terminal display"
+        },
+        {
+          "prompt": "Create command alias",
+          "command": "alias ll='ls -la'",
+          "description": "Creates command shortcut"
+        },
+        {
+          "prompt": "Show all aliases",
+          "command": "alias",
+          "description": "Lists defined aliases"
+        }
+      ]
+    },
+    {
+      "category": "git_operations",
+      "commands": [
+        {
+          "prompt": "Check git status",
+          "command": "git status",
+          "description": "Shows working tree status"
+        },
+        {
+          "prompt": "Show git commit history",
+          "command": "git log --oneline -10",
+          "description": "Shows recent commits"
+        },
+        {
+          "prompt": "List git branches",
+          "command": "git branch -a",
+          "description": "Shows all branches"
+        },
+        {
+          "prompt": "Show current branch",
+          "command": "git branch --show-current",
+          "description": "Displays current branch name"
+        },
+        {
+          "prompt": "Check git remote URLs",
+          "command": "git remote -v",
+          "description": "Shows remote repositories"
+        }
+      ]
+    }
+  ],
+  "training_examples": [
+    {
+      "input": "I need to see what files are in my downloads folder",
+      "output": "ls ~/Downloads"
+    },
+    {
+      "input": "Can you help me find all PDF files on my system?",
+      "output": "find / -name '*.pdf' 2>/dev/null"
+    },
+    {
+      "input": "How do I check how much space is left on my hard drive?",
+      "output": "df -h"
+    },
+    {
+      "input": "I want to monitor my system's performance",
+      "output": "htop"
+    },
+    {
+      "input": "Show me which programs are using the most memory",
+      "output": "ps aux --sort=-%mem | head"
+    },
+    {
+      "input": "I need to compress this folder for backup",
+      "output": "tar -czvf backup.tar.gz folder_name/"
+    },
+    {
+      "input": "How can I see what's taking up space in my home directory?",
+      "output": "du -sh ~/* | sort -hr"
+    },
+    {
+      "input": "I want to find a specific text in all my Python files",
+      "output": "grep -r 'search_term' --include='*.py' ."
+    },
+    {
+      "input": "Show me network activity",
+      "output": "netstat -tuln"
+    },
+    {
+      "input": "I need to make my script executable",
+      "output": "chmod +x script.sh"
+    }
+  ],
+  "safety_guidelines": [
+    "Never use 'rm -rf' on system directories",
+    "Avoid commands that modify system files in /etc without explicit user confirmation",
+    "Don't run commands that could terminate critical system processes",
+    "Be cautious with commands that require sudo/root access",
+    "Avoid commands that could expose sensitive information",
+    "Don't execute commands that could create security vulnerabilities",
+    "Always validate user input before incorporating into commands",
+    "Prefer read-only operations when possible",
+    "Use '--dry-run' options when available for destructive operations",
+    "Implement timeouts for long-running commands"
+  ],
+  "command_categories_to_avoid": [
+    "System shutdown/reboot commands",
+    "User password modification",
+    "Firewall rule changes",
+    "Service management for critical services",
+    "Direct hardware manipulation",
+    "Network interface configuration changes",
+    "Partition and filesystem creation/deletion",
+    "Kernel module loading/unloading",
+    "System-wide configuration changes"
+  ]
+}
